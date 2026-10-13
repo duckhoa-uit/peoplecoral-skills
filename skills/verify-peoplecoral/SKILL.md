@@ -16,7 +16,7 @@ OUT=<evidence dir>
 
 ## Read first
 
-Load `agent-device`. This repo has no e2e. Config is this skill plus `features/README.md`. The sweep driver is `scripts/smoke.py`. Upkeep is `/maintain-verification-skill`.
+Load `agent-device`. This repo has no e2e. Config is this skill plus `features/README.md`. The sweep driver is `scripts/smoke.py`. Upkeep is `/maintain-verify-peoplecoral` (or `/maintain-verification-skill` when the workspace is `peoplecoral-skills`).
 
 ## Gotchas
 

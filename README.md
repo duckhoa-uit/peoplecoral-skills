@@ -11,6 +11,7 @@ Compatible with Claude Code, Cursor, and any agent that reads `SKILL.md`.
 | Skill | Use |
 |---|---|
 | `verify-peoplecoral` | Drive the app on a simulator/emulator, doctor, smoke, evidence |
+| `maintain-verify-peoplecoral` | Upkeep loop for that feature map (source wave on workhub, live drive, one PR here) |
 | `peoplecoral-release` | Build, verify, submit, promote `wpseoai` |
 | `peoplecoral-release-notes` | App Store / Play / TestFlight notes |
 | `peoplecoral-release-status` | Read-only live / review / rollout state |
@@ -22,7 +23,7 @@ Compatible with Claude Code, Cursor, and any agent that reads `SKILL.md`.
 npx skills add duckhoa-uit/peoplecoral-skills -g -y
 ```
 
-That copies all five skills into `~/.agents/skills/` and links the agents it finds (Cursor, Claude Code, …). Do **not** pass `--agent '*'` — that tries every agent backend and is noisy.
+That copies the skills into `~/.agents/skills/` and links the agents it finds (Cursor, Claude Code, …). Do **not** pass `--agent '*'` — that tries every agent backend and is noisy.
 
 List without installing:
 
