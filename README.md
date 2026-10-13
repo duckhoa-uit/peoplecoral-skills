@@ -4,7 +4,7 @@ User-scope skills for the PeopleCoral Flutter app (`peoplecoral-workhub`): devic
 
 This repo is playbooks and scripts only. It does **not** ship `configs/`, signing keys, or store credentials. Each machine keeps those next to its checkout (or in `PEOPLECORAL_CONFIGS`).
 
-Compatible with Claude Code, Cursor, and any agent that reads `SKILL.md` from `~/.agents/skills`, `~/.claude/skills`, or `~/.cursor/skills`.
+Compatible with Claude Code, Cursor, and any agent that reads `SKILL.md`.
 
 ## Skills
 
@@ -18,20 +18,39 @@ Compatible with Claude Code, Cursor, and any agent that reads `SKILL.md` from `~
 
 ## Install
 
-The repo is private. Clone it, then link into user scope (not into a workhub checkout):
-
 ```bash
-git clone git@github.com:duckhoa-uit/peoplecoral-skills.git
-cd peoplecoral-skills
-./install.sh
+npx skills add duckhoa-uit/peoplecoral-skills -g -y
 ```
 
-`install.sh` points:
+That copies all five skills into `~/.agents/skills/` and links the agents it finds (Cursor, Claude Code, …). Do **not** pass `--agent '*'` — that tries every agent backend and is noisy.
 
-- `~/.agents/skills/<name>` → this clone
-- `~/.claude/skills/<name>` and `~/.cursor/skills/<name>` → `~/.agents/skills/<name>`
+List without installing:
 
-Re-run after `git pull`. Use `./install.sh --replace` only if a real directory is already sitting at `~/.agents/skills/<name>`.
+```bash
+npx skills add duckhoa-uit/peoplecoral-skills -l
+```
+
+One skill only:
+
+```bash
+npx skills add duckhoa-uit/peoplecoral-skills -g -s verify-peoplecoral -y
+```
+
+Update later:
+
+```bash
+npx skills update -g
+```
+
+### Clone + symlink (authors)
+
+If you are editing the skills, keep a clone and point user-scope at it:
+
+```bash
+git clone https://github.com/duckhoa-uit/peoplecoral-skills.git
+cd peoplecoral-skills
+./install.sh --replace
+```
 
 ## Checkout and configs
 
