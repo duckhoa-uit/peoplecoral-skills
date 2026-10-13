@@ -1,4 +1,4 @@
-# peoplecoral-skills
+# peoplecoral-ai-toolkit
 
 User-scope agent skills for the PeopleCoral Flutter app. Product code lives in `peoplecoral-workhub`, not here.
 
@@ -10,5 +10,5 @@ Run `/maintain-verify-peoplecoral`. Product source is a `peoplecoral-workhub` ch
 
 ```bash
 # from a workhub checkout, or set PEOPLECORAL_WORKHUB
-npx skills add duckhoa-uit/peoplecoral-skills -g -y
+npx skills add PeopleCoral-HR/peoplecoral-ai-toolkit -g -y
 ```

@@ -1,6 +1,6 @@
 ---
 name: maintain-verify-peoplecoral
-description: "Keeps verify-peoplecoral and its feature map honest: one source reader per feature against peoplecoral-workhub, one live agent-device pass, at most one PR of proven corrections on duckhoa-uit/peoplecoral-skills. Use for /maintain-verify-peoplecoral, /maintain-verification-skill when this repo is the workspace, or \"audit the verify skill\"."
+description: "Keeps verify-peoplecoral and its feature map honest: one source reader per feature against peoplecoral-workhub, one live agent-device pass, at most one PR of proven corrections on PeopleCoral-HR/peoplecoral-ai-toolkit. Use for /maintain-verify-peoplecoral, /maintain-verification-skill when this repo is the workspace, or \"audit the verify skill\"."
 disable-model-invocation: true
 compatibility: macOS with a peoplecoral-workhub checkout and the verify-peoplecoral harness (agent-device, Xcode simulator or Android emulator).
 ---
@@ -18,7 +18,7 @@ This is not the generic pstack locator. Do not search for `.cursor/skills/verify
 | Skill to edit | `skills/verify-peoplecoral/` in this repo, or `~/.agents/skills/verify-peoplecoral` after install |
 | Feature map | that skill's `features/README.md` plus sibling `features/*.md` |
 | Product source (read-only) | a `peoplecoral_mobile_app` checkout: cwd if that `pubspec.yaml` is present, else `PEOPLECORAL_WORKHUB` |
-| PRs | `duckhoa-uit/peoplecoral-skills` only |
+| PRs | `PeopleCoral-HR/peoplecoral-ai-toolkit` only |
 
 If product source is missing, stop `blocked` and say so. Source wave cannot run against this skills repo.
 
@@ -48,6 +48,6 @@ Only edit `verify-peoplecoral` (its `SKILL.md`, `features/`, and harness scripts
 
 5. **Triage.** Wrong or missing user-POV description → doc drift, fix it. Working behavior the harness can't drive → harness gap, fix it (scripts executable, invocation in `verify-peoplecoral`). App behavior that's actually broken → product gap; record it for the user, keep it out of this PR.
 
-6. **Ship or stop.** For changed: one PR on `peoplecoral-skills` of proven corrections, re-read every changed file first. For clean or blocked: no PR, report the outcome and the coverage honestly.
+6. **Ship or stop.** For changed: one PR on `peoplecoral-ai-toolkit` of proven corrections, re-read every changed file first. For clean or blocked: no PR, report the outcome and the coverage honestly.
 
 Keep concise run notes in a scratch location; don't commit them.

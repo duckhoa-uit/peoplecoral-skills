@@ -20,21 +20,21 @@ Compatible with Claude Code, Cursor, and any agent that reads `SKILL.md`.
 ## Install
 
 ```bash
-npx skills add duckhoa-uit/peoplecoral-skills -g -y
+npx skills add PeopleCoral-HR/peoplecoral-ai-toolkit -g -y
 ```
 
-That copies the skills into `~/.agents/skills/` and links the agents it finds (Cursor, Claude Code, …). Do **not** pass `--agent '*'` — that tries every agent backend and is noisy.
+The repo is org-internal (`PeopleCoral-HR`). `npx skills` needs GitHub auth for that org. Do **not** pass `--agent '*'` — that tries every agent backend and is noisy.
 
 List without installing:
 
 ```bash
-npx skills add duckhoa-uit/peoplecoral-skills -l
+npx skills add PeopleCoral-HR/peoplecoral-ai-toolkit -l
 ```
 
 One skill only:
 
 ```bash
-npx skills add duckhoa-uit/peoplecoral-skills -g -s verify-peoplecoral -y
+npx skills add PeopleCoral-HR/peoplecoral-ai-toolkit -g -s verify-peoplecoral -y
 ```
 
 Update later:
@@ -48,8 +48,8 @@ npx skills update -g
 If you are editing the skills, keep a clone and point user-scope at it:
 
 ```bash
-git clone https://github.com/duckhoa-uit/peoplecoral-skills.git
-cd peoplecoral-skills
+git clone https://github.com/PeopleCoral-HR/peoplecoral-ai-toolkit.git
+cd peoplecoral-ai-toolkit
 ./install.sh --replace
 ```
 
