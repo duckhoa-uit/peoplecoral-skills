@@ -1,0 +1,97 @@
+{
+  "about": "Routing eval for the PeopleCoral skills. expected = auto-loaded skill, or null for none. peoplecoral-release is manual (disable-model-invocation): for its queries the model loads nothing and should point the user to /peoplecoral-release (expected 'manual:peoplecoral-release'); loading a generic asc-* skill instead is wrong. Device smoke and doctor load verify-peoplecoral. Production verify-before-submit stays manual:peoplecoral-release. Competing installed skills include asc-release-flow, asc-testflight-orchestration, asc-whats-new-writer, asc-shots-pipeline, asc-screenshot-resize, asc-submission-health.",
+  "queries": [
+    {
+      "query": "ê check giúp bản android 162 đã được google approve chưa, hay vẫn đang review",
+      "expected": "peoplecoral-release-status"
+    },
+    {
+      "query": "release wpseoai 2.0.1 lên cả testflight lẫn play internal, xong thì submit review luôn",
+      "expected": "manual:peoplecoral-release"
+    },
+    {
+      "query": "upload bản mới lên TestFlight thôi, android để sau",
+      "expected": "manual:peoplecoral-release"
+    },
+    {
+      "query": "promote 163 lên production 20% trước nhé",
+      "expected": "manual:peoplecoral-release"
+    },
+    {
+      "query": "iOS build 166 bị lỗi login, rút khỏi review và submit build mới giúp tao",
+      "expected": "manual:peoplecoral-release"
+    },
+    {
+      "query": "bản nào đang live trên app store với play store vậy",
+      "expected": "peoplecoral-release-status"
+    },
+    {
+      "query": "TestFlight đã có build 167 chưa, Android internal đang code mấy",
+      "expected": "peoplecoral-release-status"
+    },
+    {
+      "query": "tài khoản reviewer trên ASC có login được bản production không, test giúp",
+      "expected": "manual:peoplecoral-release"
+    },
+    {
+      "query": "viết What's New cho 2.0.1, so với bản đang live trên từng store",
+      "expected": "peoplecoral-release-notes"
+    },
+    {
+      "query": "draft release notes từ 2.0.0 tới main hiện tại, chưa cần đẩy lên store",
+      "expected": "peoplecoral-release-notes"
+    },
+    {
+      "query": "update screenshot trên play store với app store vì home đã đổi giao diện",
+      "expected": "peoplecoral-store-assets"
+    },
+    {
+      "query": "làm lại feature graphic cho Google Play theo house style",
+      "expected": "peoplecoral-store-assets"
+    },
+    {
+      "query": "release app RN peoplecoral-workhub-rn bằng EAS lên testflight",
+      "expected": null
+    },
+    {
+      "query": "build bản demo flavor gửi Firebase App Distribution cho QA",
+      "expected": null
+    },
+    {
+      "query": "chụp screenshot màn Payslips đang lỗi để gắn vào ticket Linear",
+      "expected": null
+    },
+    {
+      "query": "viết changelog cho PR fix time off này",
+      "expected": null
+    },
+    {
+      "query": "điền Data safety form trên Play Console cho Crashlytics",
+      "expected": null
+    },
+    {
+      "query": "sửa bug Remote Config first launch trong lib/core/service/firebase",
+      "expected": null
+    },
+    {
+      "query": "submit app iOS khác của tao (bundle com.example.notes) lên App Store review",
+      "expected": null
+    },
+    {
+      "query": "smoke Payslips on the sim",
+      "expected": "verify-peoplecoral"
+    },
+    {
+      "query": "doctor this simulator rồi mở Home giúp",
+      "expected": "verify-peoplecoral"
+    },
+    {
+      "query": "verify the Calendar tab on the emulator",
+      "expected": "verify-peoplecoral"
+    },
+    {
+      "query": "verify this build before submit",
+      "expected": "manual:peoplecoral-release"
+    }
+  ]
+}
